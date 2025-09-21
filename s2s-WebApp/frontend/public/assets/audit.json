@@ -1,0 +1,54 @@
+{
+  "dayLists": [
+    {
+      "dayListsname": " Today"
+    },
+    {
+      "dayListsname": "Last 7 days"
+    },
+    {
+      "dayListsname": "Last 30 days"
+    },
+    {
+      "dayListsname": " Last 90 days"
+    }
+  ],
+  "auditData": [
+    {
+      "auditDataname": "Total Conversations",
+      "average": "0"
+    },
+    {
+      "auditDataname": "Total Messages",
+      "average": "0"
+    },
+    {
+      "auditDataname": "Avg. Messages/ User",
+      "average": "0"
+    },
+    {
+      "auditDataname": " Avg. Messages Token count",
+      "average": "0"
+    },
+    {
+      "auditDataname": "Positivity Feedback",
+      "average": "0%"
+    },
+    {
+      "auditDataname": "Negative Feedback",
+      "average": "0%"
+    },
+    {
+      "auditDataname": "Avg. Response Token count",
+      "average": "0"
+    },
+    {
+      "auditDataname": "Avg. Response time taken",
+      "average": "0"
+    },
+    {
+      "auditDataname": "Failed Messages",
+      "average": "0"
+    }
+  ]
+}

@@ -1,0 +1,418 @@
+{
+    "title": "Industroyer2: Industroyer reloaded",
+    "url": "https://www.welivesecurity.com/2022/04/12/industroyer2-industroyer-reloaded/",
+    "summary": "ESET researchers have responded to a cyber-incident that affected an energy provider in Ukraine and involved ICS-capable malware that we've named Industroyer2.",
+    "cves": [],
+    "mitres": [
+        {
+            "id": "T1485",
+            "label": "Data Destruction (Enterprise T1485)",
+            "description": "Adversaries may destroy data and files on specific systems or in large numbers on a network to interrupt availability to systems, services, and network resources. Data destruction is likely to render stored data irrecoverable by forensic techniques through overwriting files or data on local and remote drives. because individual files are destroyed rather than sections of a storage disk or the disk's logical structure.",
+            "type": "Technique",
+            "tactic": "",
+            "technique": "Data Destruction",
+            "subTechnique": ""
+        },
+        {
+            "id": "T1053",
+            "label": "Scheduled Task/Job (Enterprise T1053)",
+            "description": "Adversaries may abuse task scheduling functionality to facilitate initial or recurring execution of malicious code. Utilities exist within all major operating systems to schedule programs or scripts to be executed at a specified date and time. A task can also be scheduled on a remote system, provided the proper authentication is met (ex: RPC and file and printer sharing in Windows environments). Scheduling a task on a remote system typically may require being a member of an admin or otherwise privileged group on the remote system.",
+            "type": "Technique",
+            "tactic": "",
+            "technique": "Scheduled Task/Job",
+            "subTechnique": ""
+        },
+        {
+            "id": "T1059",
+            "label": "Command and Scripting Interpreter (Enterprise T1059)",
+            "description": "Adversaries may abuse command and script interpreters to execute commands, scripts, or binaries. These interfaces and languages provide ways of interacting with computer systems and are a common feature across many different platforms. Most systems come with some built-in command-line interface and scripting capabilities, for example, macOS and Linux distributions include some flavor of Unix Shell (T1059.004) while Windows installations include the Windows Command Shell (T1059.003) and PowerShell (T1059.001).",
+            "type": "Technique",
+            "tactic": "",
+            "technique": "Command and Scripting Interpreter",
+            "subTechnique": ""
+        },
+        {
+            "id": "T1484.001",
+            "label": "Group Policy Modification (Enterprise T1484.001)",
+            "description": "Adversaries may modify Group Policy Objects (GPOs) to subvert the intended discretionary access controls for a domain, usually with the intention of escalating privileges on the domain. Group policy allows for centralized management of user and computer settings in Active Directory (AD). GPOs are containers for group policy settings made up of files stored within a predictable network path ` \\<DOMAIN> \\SYSVOL \\<DOMAIN> \\Policies \\`.",
+            "type": "Sub-Technique",
+            "tactic": "",
+            "technique": "Domain Policy Modification",
+            "subTechnique": "Group Policy Modification"
+        },
+        {
+            "id": "T1140",
+            "label": "Deobfuscate/Decode Files or Information (Enterprise T1140)",
+            "description": "Adversaries may use Obfuscated Files or Information (T1027) to hide artifacts of an intrusion from analysis. They may require separate mechanisms to decode or deobfuscate that information depending on how they intend to use it. Methods for doing that include built-in functionality of malware or by using utilities present on the system.",
+            "type": "Technique",
+            "tactic": "",
+            "technique": "Deobfuscate/Decode Files or Information",
+            "subTechnique": ""
+        },
+        {
+            "id": "T1053.003",
+            "label": "Cron (Enterprise T1053.003)",
+            "description": "Adversaries may abuse the cron utility to perform task scheduling for initial or recurring execution of malicious code. The cron utility is a time-based job scheduler for Unix-like operating systems.  The  crontab file contains the schedule of cron entries to be run and the specified times for execution. Any crontab files are stored in operating system-specific file paths.",
+            "type": "Sub-Technique",
+            "tactic": "",
+            "technique": "Scheduled Task/Job",
+            "subTechnique": "Cron"
+        },
+        {
+            "id": "T1059.001",
+            "label": "PowerShell (Enterprise T1059.001)",
+            "description": "Adversaries may abuse PowerShell commands and scripts for execution. PowerShell is a powerful interactive command-line interface and scripting environment included in the Windows operating system..",
+            "type": "Sub-Technique",
+            "tactic": "",
+            "technique": "Command and Scripting Interpreter",
+            "subTechnique": "PowerShell"
+        },
+        {
+            "id": "T1027",
+            "label": "Obfuscated Files or Information (Enterprise T1027)",
+            "description": "Adversaries may attempt to make an executable or file difficult to discover or analyze by encrypting, encoding, or otherwise obfuscating its contents on the system or in transit. This is common behavior that can be used across different platforms and the network to evade defenses.",
+            "type": "Technique",
+            "tactic": "",
+            "technique": "Obfuscated Files or Information",
+            "subTechnique": ""
+        },
+        {
+            "id": "TA0007",
+            "label": "Discovery (Enterprise TA0007)",
+            "description": "The adversary is trying to figure out your environment.\nFeedly AI will look for the tactic Discovery (Enterprise TA0007) and its techniques and sub-techniques.",
+            "type": "Tactic",
+            "tactic": "Discovery",
+            "technique": "",
+            "subTechnique": ""
+        },
+        {
+            "id": "T1007",
+            "label": "System Service Discovery (Enterprise T1007)",
+            "description": "Adversaries may try to gather information about registered local system services. Adversaries may obtain information about services using tools as well as OS utility commands such as sc query, tasklist /svc, systemctl --type=service, and net start.",
+            "type": "Technique",
+            "tactic": "",
+            "technique": "System Service Discovery",
+            "subTechnique": ""
+        },
+        {
+            "id": "T1027.010",
+            "label": "Command Obfuscation (Enterprise T1027.010)",
+            "description": "Adversaries may obfuscate content during command execution to impede detection. Command-line obfuscation is a method of making strings and patterns within commands and scripts more difficult to signature and analyze. This type of obfuscation can be included within commands executed by delivered payloads (e.g., Phishing (T1566) and Drive-by Compromise (T1189)) or interactively via Command and Scripting Interpreter (T1059).",
+            "type": "Sub-Technique",
+            "tactic": "",
+            "technique": "Obfuscated Files or Information",
+            "subTechnique": "Command Obfuscation"
+        },
+        {
+            "id": "T1016",
+            "label": "System Network Configuration Discovery (Enterprise T1016)",
+            "description": "Adversaries may look for details about the network configuration and settings, such as IP and/or MAC addresses, of systems they access or through information discovery of remote systems. Several operating system administration utilities exist that can be used to gather this information. Examples include Arp (S0099), ipconfig (S0100)/ifconfig (S0101), nbtstat (S0102), and route (S0103).",
+            "type": "Technique",
+            "tactic": "",
+            "technique": "System Network Configuration Discovery",
+            "subTechnique": ""
+        },
+        {
+            "id": "T1529",
+            "label": "System Shutdown/Reboot (Enterprise T1529)",
+            "description": "Adversaries may shutdown/reboot systems to interrupt access to, or aid in the destruction of, those systems. Operating systems may contain commands to initiate a shutdown/reboot of a machine or network device. In some cases, these commands may also be used to initiate a shutdown/reboot of a remote computer or network device via Network Device CLI (T1059.008) (e.g. reload).",
+            "type": "Technique",
+            "tactic": "",
+            "technique": "System Shutdown/Reboot",
+            "subTechnique": ""
+        },
+        {
+            "id": "T1561.001",
+            "label": "Disk Content Wipe (Enterprise T1561.001)",
+            "description": "Adversaries may erase the contents of storage devices on specific systems or in large numbers in a network to interrupt availability to system and network resources.",
+            "type": "Sub-Technique",
+            "tactic": "",
+            "technique": "Disk Wipe",
+            "subTechnique": "Disk Content Wipe"
+        },
+        {
+            "id": "T1489",
+            "label": "Service Stop (Enterprise T1489)",
+            "description": "Adversaries may stop or disable services on a system to render those services unavailable to legitimate users. Stopping critical services or processes can inhibit or stop response to an incident or aid in the adversary's overall objectives to cause damage to the environment.",
+            "type": "Technique",
+            "tactic": "",
+            "technique": "Service Stop",
+            "subTechnique": ""
+        },
+        {
+            "id": "T1070",
+            "label": "Indicator Removal (Enterprise T1070)",
+            "description": "Adversaries may delete or modify artifacts generated within systems to remove evidence of their presence or hinder defenses. Various artifacts may be created by an adversary or something that can be attributed to an adversary’s actions. Typically these artifacts are used as defensive indicators related to monitored events, such as strings from downloaded files, logs that are generated from user actions, and other data analyzed by defenders. Location, format, and type of artifact (such as command or login history) are often specific to each platform.",
+            "type": "Technique",
+            "tactic": "",
+            "technique": "Indicator Removal",
+            "subTechnique": ""
+        },
+        {
+            "id": "TA0002",
+            "label": "Execution (Enterprise TA0002)",
+            "description": "The adversary is trying to run malicious code.\nFeedly AI will look for the tactic Execution (Enterprise TA0002) and its techniques and sub-techniques.",
+            "type": "Tactic",
+            "tactic": "Execution",
+            "technique": "",
+            "subTechnique": ""
+        },
+        {
+            "id": "T1484",
+            "label": "Domain Policy Modification (Enterprise T1484)",
+            "description": "Adversaries may modify the configuration settings of a domain to evade defenses and/or escalate privileges in domain environments. Domains provide a centralized means of managing how computer resources (ex: computers, user accounts) can act, and interact with each other, on a network. The policy of the domain also includes configuration settings that may apply between domains in a multi-domain/forest environment. Modifications to domain settings may include altering domain Group Policy Objects (GPOs) or changing trust settings for domains, including federation trusts.",
+            "type": "Technique",
+            "tactic": "",
+            "technique": "Domain Policy Modification",
+            "subTechnique": ""
+        },
+        {
+            "id": "TA0040",
+            "label": "Impact (Enterprise TA0040)",
+            "description": "The adversary is trying to manipulate, interrupt, or destroy your systems and data.\nFeedly AI will look for the tactic Impact (Enterprise TA0040) and its techniques and sub-techniques.",
+            "type": "Tactic",
+            "tactic": "Impact",
+            "technique": "",
+            "subTechnique": ""
+        },
+        {
+            "id": "TA0005",
+            "label": "Defense Evasion (Enterprise TA0005)",
+            "description": "The adversary is trying to avoid being detected.\nFeedly AI will look for the tactic Defense Evasion (Enterprise TA0005) and its techniques and sub-techniques.",
+            "type": "Tactic",
+            "tactic": "Defense Evasion",
+            "technique": "",
+            "subTechnique": ""
+        },
+        {
+            "id": "T1561",
+            "label": "Disk Wipe (Enterprise T1561)",
+            "description": "Adversaries may wipe or corrupt raw disk data on specific systems or in large numbers in a network to interrupt availability to system and network resources. With direct write access to a disk, adversaries may attempt to overwrite portions of disk data. Adversaries may opt to wipe arbitrary portions of disk data and/or wipe disk structures like the master boot record (MBR). A complete wipe of all disk sectors may be attempted.",
+            "type": "Technique",
+            "tactic": "",
+            "technique": "Disk Wipe",
+            "subTechnique": ""
+        }
+    ],
+    "malwares": [
+        {
+            "name": "INDUSTROYER2",
+            "description": "Industroyer2 is a new variant of ICS-specific malware that was recently discovered and is believed to be linked to the Sandworm APT group, which has previously targeted the Ukrainian power grid. It is designed to target IEC-104 controllers and is aimed at disrupting critical infrastructure, particularly in Ukraine. The malware is also associated with wiper malware such as CaddyWiper, indicating its destructive intent. Additionally, Industroyer2 has been observed to communicate with a command and control server, suggesting a level of sophistication and coordination by the threat actors.",
+            "types": [
+                "MALWARE"
+            ],
+            "createDate": "2022-04-12T06:45:27.196266"
+        },
+        {
+            "name": "Industroyer",
+            "description": "Industroyer is a sophisticated malware framework that was used to cause a blackout in December 2016. It has been linked to the TeleBots group, also known as Sandworm, which is responsible for the NotPetya ransomware outbreak. The recent discovery of a new backdoor, Win32/Exaramel, used by TeleBots shows strong code similarities to the Industroyer main backdoor, providing the first publicly-presented evidence linking Industroyer to TeleBots and, consequently, to NotPetya and BlackEnergy. This new evidence suggests a connection that was previously rumored but not proven.",
+            "types": [
+                "MALWARE"
+            ],
+            "createDate": "2021-09-28T09:48:43.352744"
+        },
+        {
+            "name": "CaddyWiper",
+            "description": "CaddyWiper is a destructive wiper malware targeting Ukrainian organizations, with a compiled size of just 9KB. It is designed to be deployed via a Domain Controller and is capable of recursively wiping all data within the system's Users directory, as well as all available drives and disk partitions. It overwrites file data with \"NULL\" values and is intended to cause widespread destruction to affected systems.",
+            "types": [
+                "WIPER"
+            ],
+            "createDate": "2022-03-15T19:46:30.206019"
+        },
+        {
+            "name": "Wiper",
+            "description": "type of malware that deletes data and files from computers and devices it infects",
+            "types": [],
+            "createDate": ""
+        },
+        {
+            "name": "ArguePatch",
+            "description": "ArguePatch is a loader malware that has been used in multiple cyber attacks targeting Ukrainian organizations. It has been observed in conjunction with other malware such as CaddyWiper, Industroyer2, and various data wipers. The malware is a patched version of a legitimate component of Hex-Rays IDA Pro software and has been used by threat actors such as VooDoo Bear (Sandworm) in their attacks. The latest variant of ArguePatch includes a feature to execute the next stage of an attack at a specified time, allowing it to evade detection and stay under the radar.",
+            "types": [
+                "WIPER"
+            ],
+            "createDate": "2022-05-04T07:15:19.966533"
+        },
+        {
+            "name": "Orcshred",
+            "description": "Orcshred is a wiper malware that is used for targeting Linux and Solaris systems. It was deployed by the threat actor group Sandworm in their cyberattacks, specifically in conjunction with other wiper malware such as CaddyWiper and AwfulShred. The purpose of Orcshred is to destroy data on the targeted systems, hindering the recovery process and preventing operators from regaining control of the affected infrastructure.",
+            "types": [
+                "MALWARE"
+            ],
+            "createDate": "2022-04-12T07:00:27.803567"
+        },
+        {
+            "name": "EternalPetya",
+            "description": "EternalPetya is a malware specimen that uses a combined arms approach and maximizes its capabilities by using different techniques to sabotage business operations. It has the ability to overwrite the Master Boot Record (MBR) and launch a custom bootloader, and its main component is a DLL that can infect a Windows machine. The MBR of EternalPetya contains executable code, and its 16-bits bootloader code is based on the Petya ransomware code from 2016.",
+            "types": [
+                "RANSOMWARE"
+            ],
+            "createDate": "2021-09-28T09:48:43.375408"
+        },
+        {
+            "name": "Malware Families Associated with APT28",
+            "description": "all malware families known to be associated with the threat actor APT28",
+            "types": [],
+            "createDate": ""
+        },
+        {
+            "name": "Malware Families Associated with Sandworm",
+            "description": "all malware families known to be associated with the threat actor Sandworm",
+            "types": [],
+            "createDate": ""
+        },
+        {
+            "name": "Ransomware",
+            "description": "type of malicious software that blocks access to the victim's system unless a ransom is paid",
+            "types": [],
+            "createDate": ""
+        }
+    ],
+    "threatActors": [
+        "APT-C-36",
+        "Inception Framework",
+        "Solntsepek",
+        "Earth Wendigo",
+        "Madi",
+        "UNC2452",
+        "DEV-0586",
+        "Rocket Kitten",
+        "OilRig",
+        "TA570",
+        "APT30",
+        "MoustachedBouncer",
+        "TA505",
+        "Callisto",
+        "AridViper",
+        "GCMAN",
+        "APT1",
+        "Sandman APT",
+        "APT21",
+        "Tonto Team",
+        "TA2101",
+        "XakNet",
+        "UNION SPIDER",
+        "Void Rabisu",
+        "BladeHawk",
+        "APT33",
+        "Cyber Berkut",
+        "APT40",
+        "BuhTrap",
+        "Attor",
+        "TA406",
+        "Chernovite",
+        "Sandworm",
+        "DustSquad",
+        "CopyKittens",
+        "Higaisa",
+        "APT10",
+        "ENERGETIC BEAR",
+        "Operation C-Major",
+        "Dancing Salome",
+        "Mofang",
+        "UserSec",
+        "LYCEUM",
+        "Gamaredon Group",
+        "OldGremlin",
+        "Unnamed Actor",
+        "CIRCUS SPIDER",
+        "Kimsuky",
+        "APT29",
+        "Cleaver",
+        "APT28",
+        "Aoqin Dragon",
+        "Red Menshen",
+        "RANCOR",
+        "SHARK SPIDER",
+        "Killnet",
+        "Curious Gorge",
+        "APT17",
+        "APT41",
+        "SaintBear",
+        "LOTUS PANDA",
+        "Evasive Panda",
+        "Molerats",
+        "APT19",
+        "APT12",
+        "MuddyWater",
+        "Zarya",
+        "APT15",
+        "Longhorn",
+        "HiddenArt",
+        "WIZARD SPIDER",
+        "Naikon",
+        "Boulder Bear",
+        "Stealth Mango and Tangelo",
+        "UAC-0094",
+        "OnionDog",
+        "TempTick",
+        "El Machete",
+        "White Bear",
+        "Operation Emmental",
+        "APT27",
+        "FIN7",
+        "Lazarus Group",
+        "Operation Parliament",
+        "TEMPER PANDA",
+        "RansomHouse",
+        "BackdoorDiplomacy",
+        "APT-C-12",
+        "Void Balaur",
+        "APT16",
+        "TA577",
+        "APT42",
+        "ToddyCat",
+        "FIN13",
+        "APT37",
+        "Sunglow Blizzard",
+        "Blue Termite",
+        "Vicious Panda",
+        "Equation Group",
+        "InvisiMole",
+        "Tick",
+        "Storm-0558",
+        "APT14",
+        "SNOWGLOBE",
+        "SAMURAI PANDA",
+        "Tortoiseshell",
+        "Hellsing",
+        "Winter Vivern",
+        "MAGNETIC SPIDER",
+        "RomCom",
+        "APT32",
+        "ProjectSauron",
+        "Grayling",
+        "TeamSpy Crew",
+        "Thrip",
+        "Gelsemium",
+        "DragonOK",
+        "CHRYSENE",
+        "APT2",
+        "Turla",
+        "NoName057(16)",
+        "Sowbug",
+        "Ghostwriter",
+        "Unit 8200",
+        "INDRIK SPIDER",
+        "DAGGER PANDA",
+        "Beijing Group",
+        "QUILTED TIGER",
+        "TianWu",
+        "DarkHotel",
+        "Storm-0381",
+        "Copy-Paste",
+        "Infy",
+        "Worok",
+        "APT3",
+        "APT18",
+        "APT4",
+        "Charming Kitten",
+        "Cotton Sandstorm",
+        "Scarab",
+        "FIN1",
+        "Storm-1099",
+        "Operation BugDrop",
+        "BANISHED KITTEN",
+        "Careto"
+    ]
+}

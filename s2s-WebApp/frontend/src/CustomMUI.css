@@ -1,0 +1,11 @@
+.custom-data-grid-columnHeadersInner > div {
+  background-color: #32435a;
+}
+
+.custom-data-grid-sortIcon {
+  color: white;
+}
+
+.custom-data-grid-footerContainer .MuiTablePagination-toolbar {
+  color: white;
+}

@@ -1,0 +1,445 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #0c111d !important;
+  margin: 0;
+  font-family:'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.markdown-contents {
+  user-select: text !important;
+}
+
+.markdown-content {
+  font-family: sans-serif, 'Inter';
+  font-size: 16px;
+
+}
+
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h3 {
+  margin-top: 2px;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+}
+
+.markdown-content p {
+  margin-left: 1em;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.markdown-content ul {
+  list-style-type: disc;
+  /* Change to none or decimal as needed */
+  padding-left: 20px;
+  margin-left: 2em;
+}
+
+.markdown-content ol {
+  list-style-type: decimal;
+  /* Ordered list styling */
+  padding-left: 20px;
+  margin-left: 2em;
+}
+
+.markdown-content li {
+  margin-bottom: 0.5em;
+  /* Optional: Add spacing between list items */
+}
+
+.markdown-content code {
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.markdown-content em {
+  font-style: italic;
+}
+
+.react-syntax-highlighter-code-tag {
+  white-space: pre-wrap;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.react-syntax-highlighter-line-number {
+  color: #ccc;
+}
+
+.markdown-code {
+  white-space: pre !important;
+  overflow-x: auto !important;
+}
+
+.markdown-code-ymal {
+  border-radius: 8px;
+  padding: 16px;
+  background-color: #1d2939 !important;
+  /* Matches darcula theme */
+  font-size: 14px;
+  overflow: auto;
+}
+
+.yaml-container {
+  background-color: #1d2939 !important;
+  /* Matches the background in the image */
+  border-radius: 8px;
+  padding: 16px;
+  font-size: 14px;
+  overflow: auto;
+  max-width: 100%;
+  user-select: all !important;
+  /* Adjust to your container's width */
+}
+
+.yaml-code {
+  background-color: #ff0072 !important;
+  color: #fff;
+  /* Ensure text contrast on dark background */
+  line-height: 1.5;
+  /* Similar to the spacing in the image */
+  font-family: 'Fira Code', monospace;
+  /* Enhance code readability */
+}
+
+.yaml-code .linenumber {
+  color: #fff !important;
+  /* Match line numbers with a subtle color */
+}
+
+.custom-edge {
+  stroke: #ff0072;
+  /* Set the color of the edge */
+  stroke-width: 2px;
+  /* Set the width of the edge line */
+}
+
+.custom-edge::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #ff0072;
+  /* Arrow color matches edge color */
+  transform: translate(-50%, -50%) rotate(45deg);
+  left: 100%;
+  top: 50%;
+  transform-origin: center center;
+}
+
+.markDown-ThreadBreif {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  /* line-height: 1.6; */
+  font-size: 16px;
+}
+
+.markDown-ThreadBreif h1,
+.markDown-ThreadBreif h2,
+.markDown-ThreadBreif h3 {
+  margin-top: 2px;
+  margin-bottom: 0.5em;
+  color: #fff;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 20px;
+}
+
+.markDown-ThreadBreif p {
+  margin-bottom: 0.2em;
+  margin-left: 1em;
+  font-family: 'Inter', sans-serif;
+}
+
+.markDown-ThreadBreif ul,
+.markDown-ThreadBreif ol {
+  margin-bottom: 1em;
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-left: 2em;
+}
+
+.markDown-ThreadBreif code {
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.markDown-ThreadBreif em {
+  font-style: italic;
+}
+
+/* ************************************************ */
+
+.markDown_ThreadBreif_summar {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  /* line-height: 1.6; */
+  font-size: 16px;
+}
+
+.markDown_ThreadBreif_summar h1,
+.markDown_ThreadBreif_summar h2,
+.markDown_ThreadBreif_summar h3 {
+  margin-top: 2px;
+  margin-bottom: 0.5em;
+  font-size: 1.3rem;
+}
+
+.markDown_ThreadBreif_summar p {
+  margin-bottom: 1em;
+  margin-left: 2.2em;
+}
+
+.markDown_ThreadBreif_summar ul,
+.markDown_ThreadBreif_summar ol {
+  margin-bottom: 1em;
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-left: 2em;
+}
+
+.markDown_ThreadBreif_summar code {
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.markDown_ThreadBreif_summar em {
+  font-style: italic;
+}
+
+.bouncing-loader {
+  margin-top: 4rem;
+  display: flex;
+}
+
+.bouncing-loader>div {
+  width: 10px !important;
+  height: 10px !important;
+  margin: 3px 6px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #ff6b6b, #f9d423);
+  opacity: 1;
+  animation: bouncing-loader 0.6s infinite alternate;
+}
+
+@keyframes bouncing-loader {
+  to {
+    opacity: 0.1;
+    transform: translateY(-16px);
+  }
+}
+
+.bouncing-loader>div:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.bouncing-loader>div:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.loader {
+  margin: auto;
+  border: 10px solid #f3f3f3;
+  border-top: 10px solid #1f2937;
+  border-radius: 50%;
+  width: 20px !important;
+  height: 20px !important;
+  animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (min-width: 1921px) and (max-width: 2500px) {
+  .sx.grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (min-width: 2500px) {
+  .sx.grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media (min-width: 2000px) {}
+
+.react-flow__attribution {
+  display: none !important;
+}
+
+.react-transform-wrapper.transform-component-module_wrapper__SPB86 {
+  width: unset !important;
+}
+
+.react-transform-component.transform-component-module_content__FBWxo {
+  display: block !important;
+  width: unset !important;
+}
+
+.nod_text {
+  color: var(--Base-White, #fff);
+}
+
+.PhoneInput {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.PhoneInputCountrySelect {
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+  width: 'auto';
+  margin-left: 35px;
+  height: 32px;
+}
+
+.PhoneInputCountryIcon {
+  width: 32px;
+  height: 32px;
+  margin-top: -25px;
+}
+
+.PhoneInputInput {
+  flex-grow: 20;
+  min-width: 0;
+  height: 32px;
+  border: none;
+  width: 100%;
+  margin-top: 0;
+}
+
+.user-data-grid-columnHeadersInner>div {
+  background-color: #32435a;
+}
+
+.user-data-grid-sortIcon {
+  color: white;
+}
+
+.user-data-grid-footerContainer .MuiTablePagination-toolbar {
+  color: white;
+}
+
+.custom-alert {
+  position: relative;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.custom-alert button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.custom-alert {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.fade-in {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.fade-out {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+  /* Hide the scrollbar */
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  /* For Internet Explorer 10+ */
+  scrollbar-width: none;
+  /* For Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+
+.truncate-container {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+
+.truncate-text {
+  display: inline-block;
+  max-width: 150px;
+  /* Adjust this width based on your requirement */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: top;
+}
+
+.markdown-code-block {
+  user-select: text !important;
+}
+
+.MuiDataGrid-columnHeaderTitleContainerContent:has(.sortable-header){
+  width: 100%;
+}
+
+.MuiDataGrid-columnHeader{
+  outline: none !important;
+}
+
+/* this affects all the scroll bar in the project*/
+*::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 8px !important;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: #1D2939 !important;
+}

@@ -1,0 +1,54 @@
+.mark table {
+  border-collapse: collapse;
+}
+
+.mark td,
+.mark th {
+  padding: 0.25rem 1rem;
+}
+
+.mark th {
+  font-size: 0.75rem;
+  padding-bottom: 0.25rem;
+  border: 1px solid white;
+  background: #ee7103;
+}
+
+.mark tbody {
+  border: 1px solid white;
+}
+
+.mark tbody > tr:nth-child(2n) {
+  background: #32435a;
+}
+
+.mark h1 {
+  font-size: 20px;
+}
+
+.mark h2 {
+  font-size: 18px;
+}
+
+.mark h3 {
+  font-size: 16px;
+}
+
+.mark h4 {
+  font-size: 14px;
+}
+
+.mark h5 {
+  font-size: 12px;
+}
+
+.mark h6 {
+  font-size: 10px;
+}
+
+.mark ul {
+  /* color: white; */
+  list-style-type: disc;
+  list-style-position: inside;
+  margin-left: 10px;
+}

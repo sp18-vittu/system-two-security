@@ -1,0 +1,20 @@
+{
+  "name": "authorization",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build/primitives.js",
+  "scripts": {
+    "clean": "rm -rf build tsconfig.tsbuildinfo",
+    "lint": "eslint --fix --ext=ts,js ./src",
+    "prebuild": "run-p lint",
+    "build:ts": "tsc --incremental",
+    "build": "run-s prebuild build:ts",
+    "start:dev": "tsc -w --incremental"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@openfga/sdk": "^0.2.6"
+  }
+}

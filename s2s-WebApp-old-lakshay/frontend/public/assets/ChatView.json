@@ -1,0 +1,25 @@
+{
+  "chatList": [
+    {
+      "question": "What does the Intel report say about Scattered Spider’s initial access vector?",
+      "status": "CTI Reports",
+      "CTIReports": {
+        "answer": "Scattered Spider threat actors create new user identities in the targeted organization or may modify MFA tokens to gain access to a victim’s network.",
+        "card": [
+          {
+            "cardTitle": "CACTUS: Analyzing a Coordinated Ransom...",
+            "cardfooter": "Bit Defender"
+          },
+          {
+            "cardTitle": "TTP: T1136",
+            "cardfooter": "MITE ATT&CK"
+          },
+          {
+            "cardTitle": "TTP: T1556.006",
+            "cardfooter": "MITE ATT&CK"
+          }
+        ]
+      }
+    }
+  ]
+}

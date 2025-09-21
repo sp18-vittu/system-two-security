@@ -1,0 +1,14 @@
+[
+    {
+        "name":"splunk",
+        "des":"splunk value"
+    },
+    {
+        "name":"elasticsearch",
+        "des":"elasticsearch value"
+    },
+    {
+        "name":"opensearch",
+        "des":"opensearch value"
+    }
+]

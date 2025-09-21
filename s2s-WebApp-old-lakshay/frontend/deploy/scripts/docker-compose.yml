@@ -1,0 +1,9 @@
+services:
+    webapp:
+        image: "[WEBAPP-IMG-LOCATION]"
+        ports:
+            - "[WEBAPP-PORT]:[WEBAPP-PORT]"
+        restart: always
+        container_name: webapp
+        volumes:
+          - /app/webapp/logs:/app/logs

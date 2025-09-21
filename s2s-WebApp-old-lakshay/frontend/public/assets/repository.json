@@ -1,0 +1,7 @@
+{
+  "chatlist": [
+    { "id": "newchat", "name": "New Chat", "value": "chatone" },
+    { "id": 1, "name": "chat-1", "value": "chatone" },
+    { "id": 2, "name": "chat-2", "value": "chatone" }
+  ]
+}

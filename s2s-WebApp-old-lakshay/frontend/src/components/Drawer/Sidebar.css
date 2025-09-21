@@ -1,0 +1,21 @@
+.custom-scrollbar-container::-webkit-scrollbar {
+  width: 5px; /* Set the width of the scrollbar */
+}
+
+.custom-scrollbar-container::-webkit-scrollbar-thumb {
+  border-radius: 6px; /* Round the corners of the thumb */
+}
+
+.custom-scrollbar-container::-webkit-scrollbar-corner {
+  background-color: transparent; /* Set the color of the scrollbar corner (if visible) */
+}
+
+/* Customize scrollbar styles for Firefox */
+.custom-scrollbar-container {
+  scrollbar-width: thin; /* Set the width of the scrollbar */
+}
+
+/* Customize scrollbar styles for IE and Edge */
+.custom-scrollbar-container {
+  -ms-overflow-style: none; /* Hide the scrollbar */
+}

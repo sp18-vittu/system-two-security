@@ -1,0 +1,60 @@
+{
+  "name": "fullstack",
+  "version": "1.0.0",
+  "description": "A fullstack client and admin web app",
+  "main": "index.js",
+  "scripts": {
+    "start": "pnpm --stream -r start",
+    "start:dev": "pnpm --parallel --stream -r run start:dev",
+    "build": "pnpm --stream -r run build",
+    "clean": "rm -rf .parcel-cache && pnpm -r run clean"
+  },
+  "prettier": {},
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@mui/system": "^6.2.0",
+    "@mui/x-data-grid": "^5.17.26",
+    "@parcel/node-resolver-core": "^3.4.2",
+    "ace-builds": "^1.36.5",
+    "add": "^2.0.6",
+    "crypto-browserify": "^3.12.1",
+    "eslint-config-prettier": "^8.10.0",
+    "eslint-plugin-no-smart-quotes": "^1.4.2",
+    "eslint-plugin-prettier": "^4.2.1",
+    "events": "^3.3.0",
+    "https-browserify": "^1.0.0",
+    "localforage": "^1.10.0",
+    "posthog-js": "^1.195.0",
+    "react-markdown": "^9.0.1",
+    "react-syntax-highlighter": "^15.6.1",
+    "run-s": "^0.0.0",
+    "stream-browserify": "^3.0.0",
+    "stream-http": "^3.2.0",
+    "sweetalert2": "11.4.8",
+    "url": "^0.11.4",
+    "yarn": "^1.22.22"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.62.0",
+    "eslint": "^8.57.1",
+    "eslint-config-standard-with-typescript": "^35.0.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-n": "^15.7.0",
+    "eslint-plugin-promise": "^6.6.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.8.8",
+    "typescript": "^5.7.2"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "allowedVersions": {
+        "react": "18"
+      },
+      "allowAny": [
+        "react*"
+      ]
+    }
+  }
+}
